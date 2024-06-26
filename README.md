@@ -4,8 +4,5 @@ Ini adalah script install linux debian di android, minimal spesifikasi 4/64 GB A
 
 # Install
 
-To install run this command in termux
-
-```
-curl -sL https://raw.githubusercontent.com/phoenixbyrd/Termux_XFCE/main/install.sh -o install.sh && chmod +x install.sh && ./install.sh
-``
+untuk install linux debian di android anda silahkan hubungi saya 082282719563 (not free)
+''

@@ -28,8 +28,8 @@ alias show='nala show'
 " >> $PREFIX/etc/bash.bashrc
 
 #Download Wallpaper
-wget https://raw.githubusercontent.com/phoenixbyrd/Termux_XFCE/main/peakpx.jpg
-wget https://raw.githubusercontent.com/phoenixbyrd/Termux_XFCE/main/dark_waves.png
+wget https://raw.githubusercontent.com/wahyu22010/Debian/main/peakpx.jpg
+wget https://raw.githubusercontent.com/wahyu22010/Debian/main/dark_waves.png
 mv peakpx.jpg $PREFIX/share/backgrounds/xfce/
 mv dark_waves.png $PREFIX/share/backgrounds/xfce/
 
@@ -64,21 +64,21 @@ rm Meslo.zip
 rm LICENSE.txt
 rm readme.md
 
-wget https://github.com/phoenixbyrd/Termux_XFCE/raw/main/NotoColorEmoji-Regular.ttf
+wget https://github.com/wahyu22010/Debian/raw/main/NotoColorEmoji-Regular.ttf
 mv NotoColorEmoji-Regular.ttf .fonts
 
-wget https://github.com/phoenixbyrd/Termux_XFCE/raw/main/font.ttf
+wget https://github.com/wahyu22010/Debian/raw/main/font.ttf
 mv font.ttf .termux/font.ttf
 
 #Setup Fancybash Termux
-wget https://raw.githubusercontent.com/phoenixbyrd/Termux_XFCE/main/fancybash.sh
+wget https://raw.githubusercontent.com/wahyu22010/Debian/main/fancybash.sh
 mv fancybash.sh .fancybash.sh
 echo "source $HOME/.fancybash.sh" >> $PREFIX/etc/bash.bashrc
 sed -i "326s/\\\u/$username/" $HOME/.fancybash.sh
 sed -i "327s/\\\h/termux/" $HOME/.fancybash.sh
 
 #Autostart Conky and Flameshot
-wget https://github.com/phoenixbyrd/Termux_XFCE/raw/main/config.tar.gz
+wget https://github.com/wahyu22010/Debian/raw/main/config.tar.gz
 tar -xvzf config.tar.gz
 rm config.tar.gz
 chmod +x .config/autostart/conky.desktop

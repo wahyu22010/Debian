@@ -177,7 +177,7 @@ chmod +x $HOME/Desktop/cp2menu.desktop
 mv $HOME/Desktop/cp2menu.desktop $HOME/../usr/share/applications
 
 #App Installer Utility
-git clone https://github.com/phoenixbyrd/App-Installer.git
+git clone https://github.com/wahyu22010/App-Installer.git
 mv $HOME/App-Installer $HOME/.App-Installer
 chmod +x $HOME/.App-Installer/*
 
@@ -287,8 +287,8 @@ chmod +x $HOME/../usr/bin/kill_termux_x11
 
 setup_theme() {
 #Download Wallpaper
-wget https://raw.githubusercontent.com/phoenixbyrd/Termux_XFCE/main/peakpx.jpg
-wget https://raw.githubusercontent.com/phoenixbyrd/Termux_XFCE/main/dark_waves.png
+wget https://raw.githubusercontent.com/wahyu22010/Debian/main/peakpx.jpg
+wget https://raw.githubusercontent.com/wahyu22010/Debian/main/dark_waves.png
 mv peakpx.jpg $HOME/../usr/share/backgrounds/xfce/
 mv dark_waves.png $HOME/../usr/share/backgrounds/xfce/
 
@@ -329,12 +329,12 @@ rm Meslo.zip
 rm LICENSE.txt
 rm readme.md
 
-wget https://github.com/phoenixbyrd/Termux_XFCE/raw/main/NotoColorEmoji-Regular.ttf
+wget https://github.com/wahyu22010/Debian/raw/main/NotoColorEmoji-Regular.ttf
 mv NotoColorEmoji-Regular.ttf .fonts
 cp .fonts/NotoColorEmoji-Regular.ttf $HOME/../usr/var/lib/proot-distro/installed-rootfs/debian/home/$username/.fonts/ 
 
 #Setup Fancybash Termux
-wget https://raw.githubusercontent.com/phoenixbyrd/Termux_XFCE/main/fancybash.sh
+wget https://raw.githubusercontent.com/wahyu22010/Debian/main/fancybash.sh
 mv fancybash.sh .fancybash.sh
 echo "source $HOME/.fancybash.sh" >> $HOME/.bashrc
 sed -i "326s/\\\u/$username/" $HOME/.fancybash.sh
@@ -345,19 +345,19 @@ cp .fancybash.sh $HOME/../usr/var/lib/proot-distro/installed-rootfs/debian/home/
 echo "source ~/.fancybash.sh" >> $HOME/../usr/var/lib/proot-distro/installed-rootfs/debian/home/$username/.bashrc
 sed -i '327s/termux/proot/' $HOME/../usr/var/lib/proot-distro/installed-rootfs/debian/home/$username/.fancybash.sh
 
-wget https://github.com/phoenixbyrd/Termux_XFCE/raw/main/font.ttf
+wget https://github.com/wahyu22010/Debian/raw/main/font.ttf
 mv font.ttf .termux/font.ttf
 }
 
 setup_xfce_settings() {
-wget https://github.com/phoenixbyrd/Termux_XFCE/raw/main/conky.tar.gz
+wget https://github.com/wahyu22010/Debian/raw/main/conky.tar.gz
 tar -xvzf conky.tar.gz
 rm conky.tar.gz
 mkdir ../usr/var/lib/proot-distro/installed-rootfs/debian/home/$username/.config
 mv .config/conky/ ../usr/var/lib/proot-distro/installed-rootfs/debian/home/$username/.config
 mv .config/neofetch ../usr/var/lib/proot-distro/installed-rootfs/debian/home/$username/.config
 
-wget https://github.com/phoenixbyrd/Termux_XFCE/raw/main/config.tar.gz
+wget https://github.com/wahyu22010/Debian/raw/main/config.tar.gz
 tar -xvzf config.tar.gz
 rm config.tar.gz
 chmod u+rwx .config/autostart/conky.desktop

@@ -20,7 +20,7 @@ clear
 echo ""
 echo "This script will install debian in Termux"
 echo ""
-read -r -p "Please enter username for proot installation: " username </dev/tty
+read -r -p "Please enter username for debian installation: " username </dev/tty
 
 termux-change-repo
 pkg update -y -o Dpkg::Options::="--force-confold"
