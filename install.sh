@@ -18,7 +18,7 @@ trap finish EXIT
 clear
 
 echo ""
-echo "This script will install XFCE Desktop in Termux along with a Debian proot"
+echo "This script will install debian in Termux"
 echo ""
 read -r -p "Please enter username for proot installation: " username </dev/tty
 
@@ -47,9 +47,9 @@ mkdir -p Desktop
 mkdir -p Downloads
 
 #Download required install scripts
-wget https://github.com/phoenixbyrd/Termux_XFCE/raw/main/xfce.sh
-wget https://github.com/phoenixbyrd/Termux_XFCE/raw/main/proot.sh
-wget https://github.com/phoenixbyrd/Termux_XFCE/raw/main/utils.sh
+wget https://github.com/wahyu22010/Debian/raw/main/xfce.sh
+wget https://github.com/wahyu22010/Debian/raw/main/proot.sh
+wget https://github.com/wahyu22010/Debian/raw/main/utils.sh
 chmod +x *.sh
 
 ./xfce.sh "$username"
@@ -82,6 +82,7 @@ echo ""
 echo "To exit, double click the Kill Termux X11 icon on the panel."
 echo ""
 echo "Enjoy your Termux XFCE4 Desktop experience!"
+echo "Regards>> WAHYU PRATAMA PURBA"
 echo ""
 echo ""
 
