@@ -19,7 +19,7 @@ clear
 
 echo ""
 echo "This script will install debian in Termux"
-echo "Author>>> Wahyu Pratama Purba <<<"
+echo ">>> Wahyu Pratama Purba <<<"
 echo ""
 read -r -p "Please enter username for debian installation: " username </dev/tty
 
@@ -31,7 +31,7 @@ sed -i '12s/^#//' $HOME/.termux/termux.properties
 # Display a message 
 clear -x
 echo ""
-echo "Setting up Termux Storage access." 
+echo "Setting up Termux Storage Access." 
 # Wait for a single character input 
 echo ""
 read -n 1 -s -r -p "Press any key to continue..."
@@ -83,7 +83,7 @@ echo ""
 echo "To exit, double click the Kill Termux X11 icon on the panel."
 echo ""
 echo "Enjoy your Termux XFCE4 Desktop experience!"
-echo "Regards>>> WAHYU PRATAMA PURBA <<<"
+echo ">>> WAHYU PRATAMA PURBA <<<"
 echo ""
 echo ""
 

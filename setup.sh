@@ -8,7 +8,7 @@ finish() {
   local ret=$?
   if [ ${ret} -ne 0 ] && [ ${ret} -ne 130 ]; then
     echo
-    echo "ERROR: Failed to setup XFCE on Termux."
+    echo "ERROR: Failed to setup Debian on Termux."
     echo "Please refer to the error message(s) above"
   fi
 }
@@ -18,7 +18,7 @@ trap finish EXIT
 clear
 
 echo ""
-echo "This script will install XFCE Desktop in Termux along with a Debian proot"
+echo "This script will install debian in Termux"
 echo ""
 read -r -p "Please enter username for proot installation: " username </dev/tty
 
