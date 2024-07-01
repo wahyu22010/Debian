@@ -17,7 +17,7 @@ trap finish EXIT
 
 username="$1"
 
-pkgs_proot=('sudo' 'wget' 'nala' 'jq' 'flameshot' 'conky-all')
+pkgs_proot=('sudo' 'wget' 'nala' 'jq' 'conky-all')
 
 #Install Debian proot
 pd install debian
