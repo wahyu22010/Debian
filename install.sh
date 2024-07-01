@@ -19,7 +19,7 @@ clear
 
 echo ""
 echo "This script will install debian in Termux"
-echo ">>> Wahyu Pratama Purba <<<"
+echo " Wahyu Pratama Purba "
 echo ""
 read -r -p "Please enter username for debian installation: " username </dev/tty
 
@@ -37,7 +37,7 @@ echo ""
 read -n 1 -s -r -p "Press any key to continue..."
 termux-setup-storage
 
-pkgs=('wget' 'ncurses-utils' 'dbus' 'proot-distro' 'x11-repo' 'tur-repo' 'pulseaudio')
+pkgs=('wget' 'ncurses-utils' 'dbus' 'proot-distro' 'x11-repo' 'tur-repo' 'android-tools' 'pulseaudio')
 
 pkg uninstall dbus -y
 pkg update
@@ -73,18 +73,9 @@ termux-reload-settings
 
 clear -x
 echo ""
-echo ""
-echo "Setup completed successfully!"
-echo ""
-echo "You can now connect to your Termux XFCE4 Desktop to open the desktop use the command start"
-echo ""
-echo "This will start the termux-x11 server in termux and start the XFCE Desktop and then open the installed Termux-X11 app."
-echo ""
-echo "To exit, double click the Kill Termux X11 icon on the panel."
-echo ""
-echo "Enjoy your Termux XFCE4 Desktop experience!"
-echo ">>> WAHYU PRATAMA PURBA <<<"
-echo ""
+echo "Instalasi Telah Selesai!!"
+echo "Silahkan Hubungi Saya Untuk Melanjutkan Proses BerikutNya"
+echo "WAHYU PRATAMA PURBA"
 echo ""
 
 rm xfce.sh
