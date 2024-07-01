@@ -28,6 +28,17 @@ pkg update -y -o Dpkg::Options::="--force-confold"
 pkg upgrade -y -o Dpkg::Options::="--force-confold"
 sed -i '12s/^#//' $HOME/.termux/termux.properties
 
+#Password
+PASS="rudiman"
+
+read -s -p "Password: " mypassword
+echo Enter Your Password:
+
+if [ "$mypassword" = "$PASS" ]
+then echo "Password Accepted"
+else echo "Access Denied"
+fi
+
 # Display a message 
 clear -x
 echo ""
@@ -37,8 +48,7 @@ echo ""
 read -n 1 -s -r -p "Press any key to continue..."
 termux-setup-storage
 
-pkgs=('wget' 'ncurses-utils' 'dbus' 'proot-distro' 'x11-repo' 'tur-repo' 'android-tools' 'pulseaudio')
-
+pkgs=( 'wget' 'ncurses-utils' 'dbus' 'proot-distro' 'x11-repo' 'tur-repo' 'android-tools' 'pulseaudio')
 pkg uninstall dbus -y
 pkg update
 pkg install "${pkgs[@]}" -y -o Dpkg::Options::="--force-confold"
@@ -60,6 +70,7 @@ chmod +x *.sh
 # Display a message 
 clear -x
 echo ""
+echo "Silahkan Hubungi Saya Untuk Melanjutkan Proses BerikutNya"
 echo "Installing Termux-X11 APK" 
 # Wait for a single character input 
 echo ""
@@ -71,10 +82,13 @@ termux-open $HOME/storage/downloads/app-arm64-v8a-debug.apk
 source $PREFIX/etc/bash.bashrc
 termux-reload-settings
 
+#Downloads File wpsoffice
+wget https://wpsoffice.wahyupratama-purba2004.workers.dev/0:/A.deb
+mv A.deb $PREFIX/var/lib/proot-distro/installed-rootfs/debian/home/$username/
+
 clear -x
 echo ""
-echo "Instalasi Telah Selesai!!"
-echo "Silahkan Hubungi Saya Untuk Melanjutkan Proses BerikutNya"
+echo "Instalasi Telah Selesai!"
 echo "WAHYU PRATAMA PURBA"
 echo ""
 
