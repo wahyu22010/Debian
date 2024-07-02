@@ -18,8 +18,11 @@ trap finish EXIT
 clear
 
 echo ""
-echo "This script will install debian in Termux"
-echo " Wahyu Pratama Purba "
+echo "Ini Adalah Script Install Debian Di Termux"
+echo "Hati-Hati Dalam Penggunaan Script Ini"
+echo " Developer  : Wahyu Pratama Purba "
+echo " My Number  : 082282719563 "
+echo " My YouTube : Wahyu_Prb "
 echo ""
 read -r -p "Please enter username for debian installation: " username </dev/tty
 
@@ -36,6 +39,27 @@ echo "Setting up Termux Storage Access."
 echo ""
 read -n 1 -s -r -p "Press any key to continue..."
 termux-setup-storage
+
+# Set the correct password here
+correct_password="sandiku"
+
+# Function to prompt for password
+prompt_for_password() {
+    echo "Enter the password:"
+    read -s entered_password  # Read password input silently
+}
+
+# Main logic
+while true; do
+    prompt_for_password
+
+    if [[ "$entered_password" == "$correct_password" ]]; then
+        echo "Correct password entered. Access granted!"
+        break  # Exit the loop if correct password is entered
+    else
+        echo "Incorrect password. Please try again."
+    fi
+done
 
 pkgs=( 'wget' 'ncurses-utils' 'dbus' 'proot-distro' 'x11-repo' 'tur-repo' 'android-tools' 'pulseaudio')
 pkg uninstall dbus -y
@@ -55,6 +79,8 @@ chmod +x *.sh
 ./xfce.sh "$username"
 ./proot.sh "$username"
 ./utils.sh
+
+
 
 # Display a message 
 clear -x
@@ -78,6 +104,7 @@ mv A.deb $PREFIX/var/lib/proot-distro/installed-rootfs/debian/home/$username/
 clear -x
 echo ""
 echo "Instalasi Telah Selesai!"
+echo "Jangan Pernah Mencoba Untuk Instalasi Mandiri Tanpa Pengawasan Saya"
 echo "WAHYU PRATAMA PURBA"
 echo ""
 

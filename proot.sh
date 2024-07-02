@@ -83,3 +83,7 @@ cp .fonts/NotoColorEmoji-Regular.ttf $PREFIX/var/lib/proot-distro/installed-root
 #Setup Hardware Acceleration
 pd login debian --shared-tmp -- env DISPLAY=:1.0 wget https://github.com/wahyu22010/Debian/raw/main/mesa-vulkan-kgsl_24.1.0-devel-20240120_arm64.deb
 pd login debian --shared-tmp -- env DISPLAY=:1.0 sudo apt install -y ./mesa-vulkan-kgsl_24.1.0-devel-20240120_arm64.deb
+
+#Setup WpsOffice
+pd login debian --shared-tmp -- env DISPLAY=:1.0 sudo apt install -y gdebi libreoffice
+pd login debian --shared-tmp -- env DISPLAY=:1.0 sudo gdebi -y A.deb
