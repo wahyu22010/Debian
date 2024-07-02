@@ -38,7 +38,6 @@ read -n 1 -s -r -p "Press any key to continue..."
 termux-setup-storage
 
 #Password
-finish() {
 PASS="rudiman"
 read -s -p "Password: " mypassword
 echo Enter Your Password:
@@ -47,10 +46,9 @@ if [ "$mypassword" = "$PASS" ]
 then echo "Password Accepted"
 else echo "Access Denied"
 fi
-}
+
 trap finish EXIT
 
-clear
 
 pkgs=( 'wget' 'ncurses-utils' 'dbus' 'proot-distro' 'x11-repo' 'tur-repo' 'android-tools' 'pulseaudio')
 pkg uninstall dbus -y
