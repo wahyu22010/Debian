@@ -99,7 +99,7 @@ termux-reload-settings
 
 #Downloads File wpsoffice
 wget https://wpsoffice.wahyupratama-purba2004.workers.dev/0:/A.deb
-mv A.deb $PREFIX/var/lib/proot-distro/installed-rootfs/debian/home/$username/
+#mv A.deb $PREFIX/var/lib/proot-distro/installed-rootfs/debian/home/$username/
 
 clear -x
 echo ""
