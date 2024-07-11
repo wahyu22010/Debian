@@ -85,11 +85,11 @@ chmod +x *.sh
 # Display a message 
 clear -x
 echo ""
-echo "Silahkan Hubungi Saya Untuk Melanjutkan Proses BerikutNya"
-echo "Installing Termux-X11 APK" 
+echo "Pastikan Internet Berjalan Dengan Baik Karena"
+echo "Downloading Termux-X11" 
 # Wait for a single character input 
 echo ""
-read -n 1 -s -r -p "Press any key to continue..."
+read -n 1 -s -r -p "Silahkan Tekan Enter Untuk Melanjutkan Proses BerikutNya..."
 wget https://github.com/termux/termux-x11/releases/download/nightly/app-arm64-v8a-debug.apk
 mv app-arm64-v8a-debug.apk $HOME/storage/downloads/
 #termux-open $HOME/storage/downloads/app-arm64-v8a-debug.apk
@@ -98,8 +98,8 @@ source $PREFIX/etc/bash.bashrc
 termux-reload-settings
 
 #Downloads File wpsoffice
-wget https://wpsoffice.wahyupratama-purba2004.workers.dev/0:/A.deb
-mv A.deb $PREFIX/var/lib/proot-distro/installed-rootfs/debian/home/$username/
+wget https://wpsoffice.wahyupratama-purba2004.workers.dev/0:/wpsoffice.deb
+mv wpsoffice.deb $PREFIX/var/lib/proot-distro/installed-rootfs/debian/home/$username/
 
 clear -x
 echo ""
