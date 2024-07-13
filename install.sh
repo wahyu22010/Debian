@@ -42,15 +42,16 @@ termux-setup-storage
 
 # Path to the password file on GitHub (replace with your actual GitHub raw file URL)
 
-wget -H "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" \
+curl -H "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" \
      -H "Accept: application/vnd.github.v3.raw" \
      -o password.txt \
 
-password_file_url="https://api.github.com/repos/wahyu22010/Debian1/main/password.txt" 
+password_file_url="https://api.github.com/wahyu22010/Debian1/main/password.txt" 
+#https://raw.githubusercontent.com/wahyu22010/Debian1/main/password.txt?token=GHSAT0AAAAAACUHII5MSTBBLYGWD7TG4ZVGZUSC32A
 
 # Function to read password from file
 get_password() {
-    wget -sSf "$password_file_url"
+    curl -sSf "$password_file_url"
 }
 
 # Main script
