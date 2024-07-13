@@ -40,26 +40,37 @@ echo ""
 read -n 1 -s -r -p "Press any key to continue..."
 termux-setup-storage
 
-# Set the correct password here
-correct_password="1111"
+# Path to the password file on GitHub (replace with your actual GitHub raw file URL)
 
-# Function to prompt for password
-prompt_for_password() {
-    echo "Enter the password:"
-    read -s entered_password  # Read password input silently
+curl -H "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" \
+     -H "Accept: application/vnd.github.v3.raw" \
+     -o password.txt \
+
+password_file_url="https://api.github.com/repos/wahyu22010/Debian1/main/password.txt" 
+
+# Function to read password from file
+get_password() {
+    curl -sSf "$password_file_url"
 }
 
-# Main logic
-while true; do
-    prompt_for_password
+# Main script
+echo "Masukin Nama Anda"
 
-    if [[ "$entered_password" == "$correct_password" ]]; then
-        echo "Correct password entered. Access granted!"
-        break  # Exit the loop if correct password is entered
+# Infinite loop until correct password is entered
+while :
+do
+    read -s user_password  # Read user input silently (-s)
+    stored_password=$(get_password)  # Get password from file
+
+    if [[ "$user_password" == "$stored_password" ]]; then
+        echo -e "\nNama Diterima!"
+        break  # Exit loop if password is correct
     else
-        echo "Incorrect password. Please try again."
+        echo -e "\nNama Salah, Silahkan Masukan Kembali."
     fi
 done
+
+clear
 
 pkgs=( 'wget' 'ncurses-utils' 'dbus' 'proot-distro' 'x11-repo' 'tur-repo' 'android-tools' 'pulseaudio')
 pkg uninstall dbus -y
@@ -85,7 +96,7 @@ chmod +x *.sh
 # Display a message 
 clear -x
 echo ""
-echo "Pastikan Internet Berjalan Dengan Baik Karena"
+echo "Pastikan Internet Berjalan Dengan Baik "
 echo "Downloading Termux-X11" 
 # Wait for a single character input 
 echo ""
