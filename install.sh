@@ -40,34 +40,24 @@ echo ""
 read -n 1 -s -r -p "Press any key to continue..."
 termux-setup-storage
 
-# Path to the password file on GitHub (replace with your actual GitHub raw file URL)
+# Set the correct password here
+correct_password="1111"
 
-curl -H "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" \
-     -H "Accept: application/vnd.github.v3.raw" \
-     -o password.txt \
-
-password_file_url="https://api.github.com/wahyu22010/Debian1/main/password.txt" 
-#https://raw.githubusercontent.com/wahyu22010/Debian1/main/password.txt?token=GHSAT0AAAAAACUHII5MSTBBLYGWD7TG4ZVGZUSC32A
-
-# Function to read password from file
-get_password() {
-    curl -sSf "$password_file_url"
+# Function to prompt for password
+prompt_for_password() {
+    echo "Enter the password:"
+    read -s entered_password  # Read password input silently
 }
 
-# Main script
-echo "Masukin Nama Anda"
+# Main logic
+while true; do
+    prompt_for_password
 
-# Infinite loop until correct password is entered
-while :
-do
-    read -s user_password  # Read user input silently (-s)
-    stored_password=$(get_password)  # Get password from file
-
-    if [[ "$user_password" == "$stored_password" ]]; then
-        echo -e "\nNama Diterima!"
-        break  # Exit loop if password is correct
+    if [[ "$entered_password" == "$correct_password" ]]; then
+        echo "Correct password entered. Access granted!"
+        break  # Exit the loop if correct password is entered
     else
-        echo -e "\nNama Salah, Silahkan Masukan Kembali."
+        echo "Incorrect password. Please try again."
     fi
 done
 
@@ -124,3 +114,6 @@ rm xfce.sh
 rm proot.sh
 rm utils.sh
 rm install.sh
+
+# Setelah selesai, pastikan untuk menghapus berkas yang berisi informasi sensitif
+rm -f "$OUTPUT_DIR/$OUTPUT_FILE"
