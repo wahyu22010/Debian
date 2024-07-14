@@ -115,5 +115,3 @@ rm proot.sh
 rm utils.sh
 rm install.sh
 
-# Setelah selesai, pastikan untuk menghapus berkas yang berisi informasi sensitif
-rm -f "$OUTPUT_DIR/$OUTPUT_FILE"
