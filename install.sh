@@ -41,7 +41,7 @@ read -n 1 -s -r -p "Press any key to continue..."
 termux-setup-storage
 
 # Set the correct password here
-correct_password="1111"
+correct_password="12345"
 
 # Function to prompt for password
 prompt_for_password() {
