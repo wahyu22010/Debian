@@ -41,11 +41,11 @@ read -n 1 -s -r -p "Press any key to continue..."
 termux-setup-storage
 
 # Set the correct password here
-correct_password="12345"
+correct_password="hai"
 
 # Function to prompt for password
 prompt_for_password() {
-    echo "Enter the password:"
+    echo "Enter the username:"
     read -s entered_password  # Read password input silently
 }
 
