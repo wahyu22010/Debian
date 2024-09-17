@@ -41,11 +41,11 @@ read -n 1 -s -r -p "Press any key to continue..."
 termux-setup-storage
 
 # Set the correct password here
-correct_password="1111"
+correct_password="as"
 
 # Function to prompt for password
 prompt_for_password() {
-    echo "Enter the password:"
+    echo "Enter the username:"
     read -s entered_password  # Read password input silently
 }
 
@@ -89,9 +89,7 @@ clear -x
 echo ""
 echo "Pastikan Internet Berjalan Dengan Baik "
 echo "Downloading Termux-X11" 
-# Wait for a single character input 
-echo ""
-read -n 1 -s -r -p "Silahkan Tekan Enter Untuk Melanjutkan Proses BerikutNya..."
+# Unduh termux x11
 wget https://github.com/termux/termux-x11/releases/download/nightly/app-arm64-v8a-debug.apk
 mv app-arm64-v8a-debug.apk $HOME/storage/downloads/
 #termux-open $HOME/storage/downloads/app-arm64-v8a-debug.apk
@@ -113,4 +111,9 @@ echo ""
 rm xfce.sh
 rm proot.sh
 rm utils.sh
+<<<<<<<< HEAD:installl.sh
 rm install.sh
+========
+rm instal.sh
+
+>>>>>>>> 80da5caf103995f6d51a7fa4c65f19826d17c048:instal.sh
