@@ -82,3 +82,4 @@ wget https://github.com/wahyu22010/Debian/raw/main/config.tar.gz
 tar -xvzf config.tar.gz
 rm config.tar.gz
 chmod +x .config/autostart/conky.desktop
+

@@ -42,4 +42,3 @@ elif [[ $action == "Remove .desktop file" ]]; then
 
   zenity --info --text="File '$desktop_filename' has been removed successfully!" --title="Success"
 fi
-

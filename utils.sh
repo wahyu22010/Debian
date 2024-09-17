@@ -242,3 +242,4 @@ StartupNotify=false
 " > $HOME/Desktop/kill_termux_x11.desktop
 chmod +x $HOME/Desktop/kill_termux_x11.desktop
 mv $HOME/Desktop/kill_termux_x11.desktop $PREFIX/share/applications
+
