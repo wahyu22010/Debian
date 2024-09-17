@@ -41,7 +41,7 @@ read -n 1 -s -r -p "Press any key to continue..."
 termux-setup-storage
 
 # Set the correct password here
-correct_password="as"
+correct_password="nano"
 
 # Function to prompt for password
 prompt_for_password() {
@@ -63,6 +63,11 @@ done
 
 clear
 
+#Downloading termux x11
+echo "Downloading Termux-X11"
+wget https://github.com/termux/termux-x11/releases/download/nightly/app-arm64-v8a-debug.apk
+mv app-arm64-v8a-debug.apk $HOME/storage/downloads/
+
 pkgs=( 'wget' 'ncurses-utils' 'dbus' 'proot-distro' 'x11-repo' 'tur-repo' 'android-tools' 'pulseaudio')
 pkg uninstall dbus -y
 pkg update
@@ -74,30 +79,23 @@ mkdir -p Downloads
 
 #Download required install scripts
 wget https://github.com/wahyu22010/Debian/raw/main/xfce.sh
-wget https://github.com/wahyu22010/Debian/raw/main/proot.sh
+wget https://github.com/wahyu22010/Debian/raw/main/root.sh
 wget https://github.com/wahyu22010/Debian/raw/main/utils.sh
 chmod +x *.sh
 
 ./xfce.sh "$username"
-./proot.sh "$username"
+./root.sh "$username"
 ./utils.sh
-
-
 
 # Display a message 
 clear -x
 echo ""
-echo "Pastikan Internet Berjalan Dengan Baik "
-echo "Downloading Termux-X11" 
-# Unduh termux x11
-wget https://github.com/termux/termux-x11/releases/download/nightly/app-arm64-v8a-debug.apk
-mv app-arm64-v8a-debug.apk $HOME/storage/downloads/
-#termux-open $HOME/storage/downloads/app-arm64-v8a-debug.apk
+echo "Pastikan Internet Berjalan Dengan Baik " 
 
 source $PREFIX/etc/bash.bashrc
 termux-reload-settings
 
-#Downloads File wpsoffice
+#Downloading wpsoffice
 wget https://wpsoffice.wahyupratama-purba2004.workers.dev/0:/wpsoffice.deb
 mv wpsoffice.deb $PREFIX/var/lib/proot-distro/installed-rootfs/debian/home/$username/
 
@@ -109,7 +107,8 @@ echo "WAHYU PRATAMA PURBA"
 echo ""
 
 rm xfce.sh
-rm proot.sh
+rm root.sh
 rm utils.sh
 rm instal.sh
+rm instal.sh.enc
 
