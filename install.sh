@@ -111,9 +111,5 @@ echo ""
 rm xfce.sh
 rm proot.sh
 rm utils.sh
-<<<<<<<< HEAD:installl.sh
-rm install.sh
-========
 rm instal.sh
 
->>>>>>>> 80da5caf103995f6d51a7fa4c65f19826d17c048:instal.sh
