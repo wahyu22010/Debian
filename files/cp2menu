@@ -2,7 +2,7 @@
 
 # Fungsi untuk mengecek dan menginstal dependencies
 check_dependencies() {
-    local packages=("rofi" "notification-daemon" "libnotify4")
+    local packages=("rofi")
     local missing_packages=()
 
     for pkg in "${packages[@]}"; do

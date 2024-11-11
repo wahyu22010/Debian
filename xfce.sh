@@ -2,7 +2,7 @@
 
 username="$1"
 
-pkgs=('git' 'neofetch' 'virglrenderer-android' 'papirus-icon-theme' 'xfce4' 'xfce4-goodies' 'eza' 'pavucontrol-qt' 'bat' 'jq' 'nala' 'wmctrl' 'firefox' 'netcat-openbsd' 'termux-x11-nightly' 'eza')
+pkgs=('git' 'neofetch' 'virglrenderer-android' 'papirus-icon-theme' 'xfce4' 'xfce4-goodies' 'eza' 'pavucontrol-qt' 'bat' 'jq' 'nala' 'wmctrl' 'rofi' 'firefox' 'netcat-openbsd' 'termux-x11-nightly' 'eza')
 
 #Install xfce4 desktop and additional packages
 pkg install "${pkgs[@]}" -y -o Dpkg::Options::="--force-confold"
