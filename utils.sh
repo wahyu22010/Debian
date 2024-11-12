@@ -116,7 +116,7 @@ element selected {
     background-color: #2e343f;
 }
 EOF
-}
+
 
 # Pastikan dependencies terinstal
 check_dependencies
